@@ -8,10 +8,10 @@ describe 'POST /api/comments', type: :request do
 
 
   describe 'successfully' do
-
+  
     before do
       post '/api/comments',
-           params: { comment: { article_id: article.id, body: 'This is the body of the comment' } },
+           params: { comment: { user_id: user.id, article_id: article.id, body: 'I am the body of the comment' } },
            headers: credentials
     end
 
@@ -34,7 +34,7 @@ describe 'POST /api/comments', type: :request do
 
     before do
       post '/api/comments',
-           params: { comment: { article_id: article.id } },
+           params: { comment: { user_id: user.id, article_id: article.id } },
            headers: credentials
     end
 
@@ -53,7 +53,7 @@ describe 'POST /api/comments', type: :request do
 
     before do
       post '/api/comments',
-           params: { comment: { body: 'This is a comment body' } },
+           params: { comment: { user_id: user.id, body: 'I am a comment body' } },
            headers: credentials
     end
 
@@ -64,15 +64,15 @@ describe 'POST /api/comments', type: :request do
     it 'is expected to return an error message' do
       expect(response_json['message']).to eq 'Comments must be made on an article'
     end
-
+  
   end
 
 
   describe 'unsuccessfully: with user is not authorized' do
-
+  
     before do
       post '/api/comments',
-           params: { comment: { article_id: article.id, body: 'This is the body of the comment' } }
+           params: { comment: { user_id: user.id, article_id: article.id, body: 'I am the body of the comment' } }
     end
 
     it 'is expected to return a 401 response' do
