@@ -1,3 +1,7 @@
+> #
+![fex-api-2](https://user-images.githubusercontent.com/15264325/169335541-8022ba74-a729-446d-9bff-3b802c25996f.png)
+> #
+
 # Comments Challenge
 You are challenged to implement a feature for the Crafty News API.
 
@@ -12,10 +16,10 @@ I would like to be able to leave a comment
 ``` 
 
 Tasks:
-- [ ] Write request spec
-- [ ] Add comment model
-- [ ] Comment needs to contain a body
-- [ ] Add association between comment and article
+- [x] Write request spec
+- [x] Add comment model
+- [x] Comment needs to contain a body
+- [x] Add association between comment and article
 
 
 ## Level 2
@@ -27,11 +31,11 @@ I would like to be able to leave a comment
 ``` 
 
 Tasks:
-- [ ] Write request spec
-- [ ] Add comment model
-- [ ] Comment needs to contain a body
-- [ ] Add association between comment and article
-- [ ] Only authenticated user can comment on an article
-- [ ] Add association between comment and user      
+- [x] Write request spec
+- [x] Add comment model
+- [x] Comment needs to contain a body
+- [x] Add association between comment and article
+- [x] Only authenticated user can comment on an article
+- [x] Add association between comment and user      
 
 **Good luck!**
