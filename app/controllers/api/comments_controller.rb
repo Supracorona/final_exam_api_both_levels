@@ -1,5 +1,7 @@
 class Api::CommentsController < ApplicationController
 
+  before_action :authenticate_user!, only: :create
+
   def create
     comment = Comment.new(comment_params)
     comment.save
@@ -11,7 +13,7 @@ class Api::CommentsController < ApplicationController
     else
       render json: { message: 'Comments must be made on an article' }, status: 422
     end
-  
+
   end
 
   private
